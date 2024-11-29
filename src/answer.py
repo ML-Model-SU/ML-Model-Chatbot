@@ -1,6 +1,7 @@
 from embeddings.embedder import generate_embedding
 from db.db_operations import retrieve_relevant_chunks
-def row_answer():
+from llma_connection import summarize
+def answer():
     """
     Chatbot interface for querying and generating answers.
     """
@@ -11,5 +12,6 @@ def row_answer():
 
         query_embedding = generate_embedding(query)
         relevant_chunks = retrieve_relevant_chunks(query_embedding)
-        return relevant_chunks
+        summarize_answer = summarize(query, relevant_chunks)
+        return summarize_answer
 
