@@ -17,7 +17,7 @@ def insert_embedding(content, embedding):
     cur.close()
     conn.close()
 
-def retrieve_relevant_chunks(query_embedding, top_k=3):
+def retrieve_relevant_chunks(query_embedding, top_k=1):
     """
     Retrieve the most relevant chunks based on a query embedding.
     """
