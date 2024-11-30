@@ -1,2 +1,9 @@
 sentence-transformers
 psycopg2-binary
+
+Flask==2.3.0
+psycopg2==2.9.3  # for PostgreSQL
+sentence-transformers==2.2.0
+groq==0.2.0  # for Groq API integration
+pandas==1.5.3
+flask-cors
