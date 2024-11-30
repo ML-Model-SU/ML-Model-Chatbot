@@ -6,9 +6,9 @@ def get_db_connection():
     :return: Connection object.
     """
     return psycopg2.connect(
-        dbname="your_db_name",
-        user="your_username",
-        password="your_password",
+        dbname="mldata",
+        user="postgres",
+        password="#RNJ7773RNJ7773",
         host="localhost",
-        port=5432
+        port=5433
     )

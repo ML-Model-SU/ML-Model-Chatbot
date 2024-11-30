@@ -1,4 +1,4 @@
-from db_config import get_db_connection
+from src.db.db_config import get_db_connection
 
 def insert_embedding(content, embedding):
     """
@@ -27,7 +27,7 @@ def retrieve_relevant_chunks(query_embedding, top_k=1):
         """
         SELECT content
         FROM embeddings
-        ORDER BY embedding <-> %s
+        ORDER BY embedding <-> %s::vector
         LIMIT %s
         """,
         (query_embedding, top_k)
